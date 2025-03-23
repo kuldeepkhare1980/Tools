@@ -3,295 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Upload and download business ideas, children's stories, and creative business ideas. Create videos from stories.">
-    <meta name="keywords" content="business ideas, children's stories, creative ideas, upload, download, video creation">
-    <meta name="author" content="Your Name">
-    <title>Creative Hub - Upload, Download, and Create</title>
+    <meta name="description" content="Ark Search Engine - Free online tools for image compression, PDF to Word, Word to PDF, and JPEG to PDF conversion. Optimize your files with ease.">
+    <meta name="keywords" content="image compression, PDF to Word, Word to PDF, JPEG to PDF, online tools, arksearchengine.com">
+    <meta name="author" content="Ark Search Engine">
+    <title>Ark Search Engine - Free Online Tools</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4023812068844972"
+            crossorigin="anonymous"></script>
     <style>
-        /* Global Styles */
+        /* CSS Styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f4f4f9, #e0e0f5);
-            color: #333;
-            line-height: 1.6;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            min-height: 100vh;
         }
 
         header {
-            background: linear-gradient(135deg, #4CAF50, #45a049);
-            color: white;
-            padding: 4rem 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
             margin: 0;
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 600;
         }
 
         header p {
-            margin: 1rem 0 0;
+            margin: 10px 0 0;
             font-size: 1.2rem;
         }
 
-        .cta-button {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 0.75rem 2rem;
-            background-color: #ff6f61;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #ff4a3d;
-            transform: translateY(-3px);
-        }
-
         main {
-            padding: 2rem;
+            padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         section {
-            background: white;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         h2 {
-            color: #4CAF50;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
+            margin-top: 0;
+            font-size: 1.8rem;
             font-weight: 600;
+            color: #fff;
         }
 
-        .upload-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .upload-form input, .upload-form textarea, .upload-form select {
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .upload-form button {
-            padding: 0.75rem;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .upload-form button:hover {
-            background-color: #45a049;
-        }
-
-        .download-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .download-card {
-            background: #f9f9f9;
-            border-radius: 10px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .download-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .download-card h3 {
-            margin: 0.5rem 0;
-            font-size: 1.25rem;
-            color: #333;
-        }
-
-        .download-card p {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        .download-card a {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.5rem 1rem;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-card a:hover {
-            background-color: #45a049;
-        }
-
-        .video-creation {
-            text-align: center;
-        }
-
-        .video-creation textarea {
+        input, select, button {
+            margin: 10px 0;
+            padding: 10px;
             width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .video-creation button {
-            padding: 0.75rem 2rem;
-            background-color: #4CAF50;
-            color: white;
+            max-width: 300px;
             border: none;
             border-radius: 5px;
             font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
         }
 
-        .video-creation button:hover {
-            background-color: #45a049;
+        button {
+            background: #ff6f61;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #ff3b2f;
+        }
+
+        .ads {
+            margin: 20px 0;
+            text-align: center;
         }
 
         footer {
-            background: #333;
-            color: white;
+            background: rgba(0, 0, 0, 0.7);
             text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
+            padding: 10px;
+            margin-top: 20px;
         }
 
-        footer p {
-            margin: 0;
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
         }
 
-        .social-links {
-            margin-top: 1rem;
+        footer a:hover {
+            text-decoration: underline;
         }
 
-        .social-links a {
-            color: white;
-            margin: 0 0.5rem;
-            font-size: 1.2rem;
-            transition: color 0.3s ease;
+        #compressed-image-container img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 5px;
         }
 
-        .social-links a:hover {
-            color: #4CAF50;
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
+        .loading i {
+            font-size: 2rem;
+            color: #fff;
+            animation: spin 1s linear infinite;
+        }
 
-            header p {
-                font-size: 1rem;
-            }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
-            h2 {
-                font-size: 1.75rem;
-            }
+        .progress-bar {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+            display: none;
+        }
+
+        .progress-bar div {
+            height: 10px;
+            background: #ff6f61;
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        .tool-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tool-section input, .tool-section select, .tool-section button {
+            margin: 10px 0;
+        }
+
+        .tool-section button {
+            width: 200px;
+        }
+
+        .advertisement {
+            margin: 20px 0;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Creative Hub</h1>
-        <p>Upload, download, and create amazing content. Share business ideas, children's stories, and more!</p>
-        <a href="#upload" class="cta-button">Get Started</a>
+        <h1>Welcome to Ark Search Engine</h1>
+        <p>Your one-stop solution for file optimization and conversion.</p>
     </header>
 
     <main>
-        <!-- Upload Section -->
-        <section id="upload">
-            <h2>Upload Content</h2>
-            <form class="upload-form">
-                <input type="text" placeholder="Title" required>
-                <textarea placeholder="Description" rows="4" required></textarea>
-                <select required>
-                    <option value="">Select Category</option>
-                    <option value="business-ideas">Business Ideas</option>
-                    <option value="children-stories">Children's Stories</option>
-                    <option value="creative-ideas">Creative Ideas</option>
-                </select>
-                <input type="file" required>
-                <button type="submit">Upload</button>
-            </form>
+        <!-- Image Compression Tool -->
+        <section id="image-compression" class="tool-section">
+            <h2>Image Compression Tool</h2>
+            <input type="file" id="image-input" accept="image/*">
+            <label for="compression-level">Compression Level:</label>
+            <select id="compression-level">
+                <option value="0.1">Low</option>
+                <option value="0.5">Medium</option>
+                <option value="0.9">High</option>
+            </select>
+            <button id="compress-btn">Compress Image</button>
+            <div class="loading" id="image-loading">
+                <i class="fas fa-spinner"></i>
+            </div>
+            <div class="progress-bar" id="image-progress">
+                <div></div>
+            </div>
+            <div id="compressed-image-container"></div>
         </section>
 
-        <!-- Download Section -->
-        <section id="download">
-            <h2>Download Content</h2>
-            <div class="download-grid">
-                <div class="download-card">
-                    <h3>Business Idea 1</h3>
-                    <p>A creative business idea for startups.</p>
-                    <a href="ark.html">Download</a> <!-- Updated file name -->
-                </div>
-                <div class="download-card">
-                    <h3>Children's Story 1</h3>
-                    <p>A fun and engaging story for kids.</p>
-                    <a href="children-story-1.html">Download</a> <!-- Placeholder file name -->
-                </div>
-                <div class="download-card">
-                    <h3>Creative Idea 1</h3>
-                    <p>An innovative idea for creative minds.</p>
-                    <a href="creative-idea-1.html">Download</a> <!-- Placeholder file name -->
-                </div>
+        <!-- PDF to Word Tool -->
+        <section id="pdf-to-word" class="tool-section">
+            <h2>PDF to Word Converter</h2>
+            <input type="file" id="pdf-input" accept="application/pdf">
+            <button id="convert-pdf-to-word">Convert to Word</button>
+            <div class="loading" id="pdf-loading">
+                <i class="fas fa-spinner"></i>
+            </div>
+            <div class="progress-bar" id="pdf-progress">
+                <div></div>
             </div>
         </section>
 
-        <!-- Video Creation Section -->
-        <section class="video-creation">
-            <h2>Create a Video from a Story</h2>
-            <textarea placeholder="Paste your story here..." rows="6"></textarea>
-            <button>Create Video</button>
+        <!-- Word to PDF Tool -->
+        <section id="word-to-pdf" class="tool-section">
+            <h2>Word to PDF Converter</h2>
+            <input type="file" id="word-input" accept=".doc,.docx">
+            <button id="convert-word-to-pdf">Convert to PDF</button>
+            <div class="loading" id="word-loading">
+                <i class="fas fa-spinner"></i>
+            </div>
+            <div class="progress-bar" id="word-progress">
+                <div></div>
+            </div>
+        </section>
+
+        <!-- JPEG to PDF Tool -->
+        <section id="jpeg-to-pdf" class="tool-section">
+            <h2>JPEG to PDF Converter</h2>
+            <input type="file" id="jpeg-input" accept="image/jpeg">
+            <button id="convert-jpeg-to-pdf">Convert to PDF</button>
+            <div class="loading" id="jpeg-loading">
+                <i class="fas fa-spinner"></i>
+            </div>
+            <div class="progress-bar" id="jpeg-progress">
+                <div></div>
+            </div>
+        </section>
+
+        <!-- AdSense Ad Unit -->
+        <section id="advertisement" class="advertisement">
+            <h2>Advertisement</h2>
+            <div class="ads">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-4023812068844972"
+                     data-ad-slot="1234567890"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Creative Hub. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
+        <p>&copy; 2023 <a href="https://arksearchengine.com">arksearchengine.com</a>. All rights reserved.</p>
     </footer>
+
+    <script>
+        // JavaScript for Image Compression
+        document.getElementById('compress-btn').addEventListener('click', function () {
+            const file = document.getElementById('image-input').files[0];
+            const compressionLevel = parseFloat(document.getElementById('compression-level').value);
+
+            if (file) {
+                const loading = document.getElementById('image-loading');
+                const progressBar = document.getElementById('image-progress');
+                loading.style.display = 'block';
+                progressBar.style.display = 'block';
+
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = new Image();
+                    img.src = e.target.result;
+                    img.onload = function () {
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        ctx.drawImage(img, 0, 0);
+
+                        canvas.toBlob(function (blob) {
+                            const compressedImage = URL.createObjectURL(blob);
+                            const imgElement = document.createElement('img');
+                            imgElement.src = compressedImage;
+                            document.getElementById('compressed-image-container').innerHTML = '';
+                            document.getElementById('compressed-image-container').appendChild(imgElement);
+                            loading.style.display = 'none';
+                            progressBar.style.display = 'none';
+                        }, 'image/jpeg', compressionLevel);
+                    };
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Placeholder for PDF to Word Conversion
+        document.getElementById('convert-pdf-to-word').addEventListener('click', function () {
+            const loading = document.getElementById('pdf-loading');
+            const progressBar = document.getElementById('pdf-progress');
+            loading.style.display = 'block';
+            progressBar.style.display = 'block';
+            setTimeout(() => {
+                loading.style.display = 'none';
+                progressBar.style.display = 'none';
+                alert('PDF to Word conversion is not implemented in this demo. Backend processing is required.');
+            }, 2000);
+        });
+
+        // Placeholder for Word to PDF Conversion
+        document.getElementById('convert-word-to-pdf').addEventListener('click', function () {
+            const loading = document.getElementById('word-loading');
+            const progressBar = document.getElementById('word-progress');
+            loading.style.display = 'block';
+            progressBar.style.display = 'block';
+            setTimeout(() => {
+                loading.style.display = 'none';
+                progressBar.style.display = 'none';
+                alert('Word to PDF conversion is not implemented in this demo. Backend processing is required.');
+            }, 2000);
+        });
+
+        // Placeholder for JPEG to PDF Conversion
+        document.getElementById('convert-jpeg-to-pdf').addEventListener('click', function () {
+            const loading = document.getElementById('jpeg-loading');
+            const progressBar = document.getElementById('jpeg-progress');
+            loading.style.display = 'block';
+            progressBar.style.display = 'block';
+            setTimeout(() => {
+                loading.style.display = 'none';
+                progressBar.style.display = 'none';
+                alert('JPEG to PDF conversion is not implemented in this demo. Backend processing is required.');
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
