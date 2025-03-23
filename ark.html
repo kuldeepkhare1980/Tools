@@ -8,7 +8,7 @@
     <meta name="author" content="Ark Search Engine">
     <title>Ark Search Engine - Free Online Tools</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google AdSense -->
@@ -23,24 +23,30 @@
             background: linear-gradient(135deg, #6a11cb, #2575fc);
             color: #fff;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         header {
             background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
-            font-weight: 600;
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(45deg, #ff6f61, #ff3b2f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         header p {
             margin: 10px 0 0;
             font-size: 1.2rem;
+            color: #ddd;
         }
 
         main {
@@ -52,38 +58,55 @@
         section {
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 15px;
             margin-bottom: 20px;
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
         h2 {
             margin-top: 0;
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 600;
             color: #fff;
+            text-align: center;
         }
 
         input, select, button {
             margin: 10px 0;
-            padding: 10px;
+            padding: 12px;
             width: 100%;
             max-width: 300px;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-size: 1rem;
-        }
-
-        button {
-            background: #ff6f61;
+            background: rgba(255, 255, 255, 0.2);
             color: #fff;
-            cursor: pointer;
             transition: background 0.3s ease;
         }
 
+        input:focus, select:focus, button:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        button {
+            background: linear-gradient(45deg, #ff6f61, #ff3b2f);
+            color: #fff;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
         button:hover {
-            background: #ff3b2f;
+            background: linear-gradient(45deg, #ff3b2f, #ff6f61);
+            transform: scale(1.05);
         }
 
         .ads {
@@ -94,24 +117,27 @@
         footer {
             background: rgba(0, 0, 0, 0.7);
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             margin-top: 20px;
+            font-size: 0.9rem;
         }
 
         footer a {
             color: #ff6f61;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         footer a:hover {
-            text-decoration: underline;
+            color: #ff3b2f;
         }
 
         #compressed-image-container img {
             max-width: 100%;
             height: auto;
             margin-top: 10px;
-            border-radius: 5px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .loading {
@@ -134,7 +160,7 @@
         .progress-bar {
             width: 100%;
             background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
+            border-radius: 8px;
             overflow: hidden;
             margin: 10px 0;
             display: none;
@@ -142,7 +168,7 @@
 
         .progress-bar div {
             height: 10px;
-            background: #ff6f61;
+            background: linear-gradient(45deg, #ff6f61, #ff3b2f);
             width: 0;
             transition: width 0.3s ease;
         }
